@@ -20,7 +20,7 @@ public class AgendaContatos {
         }
     }
 
-    publi void exibirContatos() {
+    public void exibirContatos() {
         System.out.println(agendaContatos);
     }
 
