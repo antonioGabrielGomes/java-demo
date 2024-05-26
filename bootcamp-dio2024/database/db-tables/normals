@@ -1,0 +1,3 @@
+1FN atomicidade de dados: garante que cada valor seja atomico e que os registros sejam únicos e identificáveis;
+2FN garante que os atributos não chave dependam totalmente da chave primária, evitando dependências parciais;
+3FN elimina dependências transitivas entre os atributos não cahve, garantindo que cada atributo não chave dependa apenas da chave primária, não havendo dependências indiretas entre eles;

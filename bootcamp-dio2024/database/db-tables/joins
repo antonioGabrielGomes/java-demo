@@ -1,0 +1,11 @@
+inner join
+left join ou left outer join
+right join ou right outer join
+full join ou full outer join
+
+
+count  conta o numero de registros
+sum soma os valores de uma coluna numerica
+avg calcula a média dos valores de uma coluna numerica
+min retorna o valor minimo de uma coluna
+max retorna o valor maximo de uma coluna
