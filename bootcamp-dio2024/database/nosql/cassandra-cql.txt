@@ -1,0 +1,34 @@
+docker exec -ti 895 cqlsh localhost
+
+AULA 01
+----
+----
+cqlsh> CREATE KEYSPACE fenda_biquini WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+cqlsh> use fenda_biquini;
+sqlsh:fenda_biquini> CREATE COLUMNFAMILY clients (name TEXT PRIMARY KEY, age int);
+sqlsh:fenda_biquini> SELECT * FROM clients;
+-----
+sqlsh:fenda_biquini> INSERT INTO clients (name, age) VALUES ('bROB ESMArley', 38);
+sqlsh:fenda_biquini> SELECT * FROM clients;
+----
+sqlsh:fenda_biquini> INSERT INTO clients JSON '{"name": "Patkuto"}';
+sqlsh:fenda_biquini> SELECT * FROM clients;
+----
+sqlsh:fenda_biquini> SELECT age, WRITETIME(age) FROM clients ;
+----
+sqlsh:fenda_biquini> SELECT * FROM clients WHERE name = 'Bob Esponja';
+----
+sqlsh:fenda_biquini> UPDATE clients SET age=33 WHERE name = 'Patkuto';
+sqlsh:fenda_biquini> SELECT * FROM clients;
+----
+sqlsh:fenda_biquini> ALTER COLUMNFAMILY clients ADD hobby text;
+----
+sqlsh:fenda_biquini> UPDATE clients SET hobby='comeragua' WHERE name = 'Patkuto';
+sqlsh:fenda_biquini> SELECT * FROM clients;
+----
+sqlsh:fenda_biquini> SELECT age, WRITETIME(age), hobby, WRITETIME(hobby) FROM clients;
+----
+sqlsh:fenda_biquini> DELETE FROM clients WHERE name='Patkuto';
+----
+----
+----
