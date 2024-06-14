@@ -1,9 +1,9 @@
 docker exec -ti 895 cqlsh localhost
 
 AULA 01
+---- 
 ----
-----
-cqlsh> CREATE KEYSPACE fenda_biquini WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1};
+cqlsh> CREATE KEYSPACE fenda_biquini WITH replication = {'class': 'SimpleStrategy', 'replication_factor': 1}; 
 cqlsh> use fenda_biquini;
 sqlsh:fenda_biquini> CREATE COLUMNFAMILY clients (name TEXT PRIMARY KEY, age int);
 sqlsh:fenda_biquini> SELECT * FROM clients;
